@@ -2,8 +2,6 @@ let listElement = document.querySelector("#app ul");
 let inputElement = document.querySelector("#app input");
 let buttonElement = document.querySelector("#app button");
 
-// let tarefas = [];
-
 let tarefas = JSON.parse(localStorage.getItem("@listaTarefas")) || []; // JSON.parse é para, e || [] é para caso não haja nada no localStorage
 
 function renderTarefas() {
@@ -47,7 +45,6 @@ function adicionarTarefas() {
 }
 
 buttonElement.onclick = adicionarTarefas;
-
 
 function deletarTarefa(posicao) {
   // alert("POSIÇÃO DO ITEM " + posicao)
